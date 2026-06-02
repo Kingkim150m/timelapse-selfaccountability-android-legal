@@ -2,10 +2,10 @@
 
 **Developer:** Alvaro Kim  
 **Contact:** kingkim150m@gmail.com  
-**Effective date:** May 9, 2026  
-**Last updated:** May 23, 2026
+**Effective date:** Jun 2, 2026  
+**Last updated:** Jun 2, 2026
 
-> **Public URL:** `[TO BE FILLED — paste the hosted URL here before Play Store submission]`
+> **Public URL:** `https://kingkim150m.github.io/timelapse-selfaccountability-android-legal/`
 
 ---
 
