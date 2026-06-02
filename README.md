@@ -1,5 +1,5 @@
 # timelapse-selfaccountability-android-legal
 Legal pages for Timelapse - Self Accountability
 
-- [Privacy Policy](privacy-policy.md)
-- [Terms and Conditions](terms-and-conditions.md)
+- [Privacy Policy](PRIVACY_POLICY.md)
+- [Terms and Conditions](TERMS_AND_CONDITIONS.md)
