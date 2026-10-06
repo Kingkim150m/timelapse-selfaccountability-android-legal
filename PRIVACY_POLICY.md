@@ -3,7 +3,7 @@
 **Developer:** Alvaro Kim  
 **Contact:** kingkim150m@gmail.com  
 **Effective date:** Jun 2, 2026  
-**Last updated:** Oct 1, 2026
+**Last updated:** Oct 6, 2026
 
 > **Public URL:** `https://kingkim150m.github.io/timelapse-selfaccountability-android-legal/`
 
@@ -351,6 +351,12 @@ The app does not knowingly collect personal information from children under 13. 
 - The app does not operate a cloud backend or developer-run server.
 - `android:allowBackup="false"` is set in the app manifest, preventing app-private data (including screen captures and session data) from being included in Android's automatic cloud backup to Google.
 - Exported files written to shared storage are subject to Android's standard file-system protections.
+
+---
+
+## Website visitors
+
+This policy and the Terms are hosted on GitHub Pages. GitHub, as the hosting provider, may process visitors' IP addresses and request data under its own privacy statement. Timelapse adds no analytics, cookies, web fonts or other third-party resources to these pages.
 
 ---
 
