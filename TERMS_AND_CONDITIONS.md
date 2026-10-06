@@ -3,7 +3,7 @@
 **Developer:** Alvaro Kim  
 **Contact:** kingkim150m@gmail.com  
 **Effective date:** June 2, 2026  
-**Last updated:** October 1, 2026
+**Last updated:** October 6, 2026
 
 > **Public URL:** `https://kingkim150m.github.io/timelapse-selfaccountability-android-legal/`
 
@@ -148,6 +148,8 @@ You may not copy, sell, rent, lease, sublicense, distribute, reverse engineer, m
 The App may interact with third-party services such as Google Play Billing or Android system services. Those services are provided by third parties and are governed by their own terms and privacy policies.
 
 When you share exports through another app or service, that third party controls its own copy of the file.
+
+Timelapse: Adaptive Blocking is an independent app. It is not affiliated with, endorsed by, or sponsored by TikTok, Instagram, Facebook, Meta, X, Reddit, Snapchat, YouTube, or Google. Those and any other third-party names, trademarks, and logos belong to their owners and are used only to identify the apps and services the App's features work with.
 
 ## 17. App availability and changes
 

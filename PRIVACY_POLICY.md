@@ -354,6 +354,14 @@ The app does not knowingly collect personal information from children under 13. 
 
 ---
 
+## Your privacy rights and requests
+
+The developer does not collect, receive, or hold your personal data from the app. Captures, reports, schedules, usage history, and settings stay on your device, and the developer has no account, profile, or server-side copy of them. Because of this, there is nothing held by the developer for you to access, export, correct, or delete, so access, portability, correction, and erasure requests (for example under the GDPR, UK GDPR, CCPA/CPRA, or similar laws) do not apply to app data. You control that data yourself: clear the app's data or uninstall the app (see "Data retention and deletion").
+
+Outside the app, the developer may hold only two things: emails you choose to send to kingkim150m@gmail.com, which are used to reply and handle your request, and order records that Google Play shares with developers (such as order ID, product, country, and amount). Google processes payments and is responsible for that data under its own privacy policy. If you want an email you sent deleted, or you have any other privacy question or request, write to kingkim150m@gmail.com and the developer will respond. You may also contact your local data protection authority.
+
+---
+
 ## Website visitors
 
 This policy and the Terms are hosted on GitHub Pages. GitHub, as the hosting provider, may process visitors' IP addresses and request data under its own privacy statement. Timelapse adds no analytics, cookies, web fonts or other third-party resources to these pages.
