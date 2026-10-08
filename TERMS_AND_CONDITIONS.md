@@ -1,9 +1,9 @@
 # Terms and Conditions - Timelapse: Adaptive Blocking
 
 **Developer:** Alvaro Kim  
-**Contact:** kingkim150m@gmail.com  
+**Contact:** kingprogramming150+t@gmail.com<br>
 **Effective date:** June 2, 2026  
-**Last updated:** October 6, 2026
+**Last updated:** October 8, 2026
 
 > **Public URL:** `https://kingkim150m.github.io/timelapse-selfaccountability-android-legal/`
 
@@ -15,7 +15,7 @@ These Terms and Conditions ("Terms") govern your use of Timelapse: Adaptive Bloc
 
 ## 2. Eligibility
 
-You may use the App only if you are above the minimum legal age in your country or region to agree to these Terms and to use the App. If you are not, do not download, install, or use the App.
+You may use the App only if you are at least 18 years old and meet any higher age required in your country or region to independently agree to these Terms and purchase a subscription without parental or guardian consent. If you do not meet both requirements, do not download, install, or use the App.
 
 ## 3. What the App is
 
@@ -194,4 +194,4 @@ We may update these Terms from time to time. The updated version will be posted 
 For questions about these Terms:
 
 **Developer:** Alvaro Kim  
-**Email:** kingkim150m@gmail.com
+**Email:** kingprogramming150+t@gmail.com

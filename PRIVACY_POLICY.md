@@ -1,9 +1,9 @@
 # Privacy Policy — Timelapse: Adaptive Blocking
 
 **Developer:** Alvaro Kim  
-**Contact:** kingkim150m@gmail.com  
+**Contact:** kingprogramming150+t@gmail.com<br>
 **Effective date:** Jun 2, 2026  
-**Last updated:** Oct 7, 2026
+**Last updated:** Oct 8, 2026
 
 > **Public URL:** `https://kingkim150m.github.io/timelapse-selfaccountability-android-legal/`
 
@@ -341,9 +341,9 @@ This app does not currently include any third-party analytics SDK (such as Fireb
 
 ## Children and minors
 
-This app is intended for use by individuals who want to voluntarily monitor and improve their own screen-time habits. It is not designed as a parental monitoring or child-tracking tool and should not be used to monitor another person's device without their knowledge and consent.
+This app is intended only for adults aged at least 18. If your country or region sets a higher age for independently agreeing to these Terms and purchasing a subscription without parental or guardian consent, that higher age applies. Anyone below the applicable age is not eligible to use the app. The app is not designed as a parental-monitoring or child-tracking tool and should not be used to monitor another person's device without their knowledge and consent.
 
-The app does not knowingly collect personal information from children under 13. If you believe a child under 13 has used this app in a way that involves their personal information, please contact us at kingkim150m@gmail.com.
+If you believe someone below the applicable age has sent personal information directly to the developer, for example by contacting support, please contact us at kingprogramming150+t@gmail.com.
 
 ---
 
@@ -375,7 +375,7 @@ The app does not knowingly collect personal information from children under 13. 
 
 The developer does not collect, receive, or hold your personal data from the app. Captures, reports, schedules, usage history, and settings stay on your device, and the developer has no account, profile, or server-side copy of them. Because of this, there is nothing held by the developer for you to access, export, correct, or delete, so access, portability, correction, and erasure requests (for example under the GDPR, UK GDPR, CCPA/CPRA, or similar laws) do not apply to app data. You control that data yourself: clear the app's data or uninstall the app (see "Data retention and deletion").
 
-Outside the app, the developer may hold only two things: emails you choose to send to kingkim150m@gmail.com, which are used to reply and handle your request, and order records that Google Play shares with developers (such as order ID, product, country, and amount). Google processes payments and is responsible for that data under its own privacy policy. If you want an email you sent deleted, or you have any other privacy question or request, write to kingkim150m@gmail.com and the developer will respond. You may also contact your local data protection authority.
+Outside the app, the developer may hold only two things: emails you choose to send to kingprogramming150+t@gmail.com, which are used to reply and handle your request, and order records that Google Play shares with developers (such as order ID, product, country, and amount). Google processes payments and is responsible for that data under its own privacy policy. If you want an email you sent deleted, or you have any other privacy question or request, write to kingprogramming150+t@gmail.com and the developer will respond. You may also contact your local data protection authority.
 
 ---
 
@@ -396,4 +396,4 @@ If this policy changes in a material way, the updated version will be posted at 
 For questions about this privacy policy or about your data:
 
 **Developer:** Alvaro Kim  
-**Email:** kingkim150m@gmail.com
+**Email:** kingprogramming150+t@gmail.com
