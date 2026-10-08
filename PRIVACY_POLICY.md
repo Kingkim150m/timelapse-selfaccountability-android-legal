@@ -3,7 +3,7 @@
 **Developer:** Alvaro Kim  
 **Contact:** kingkim150m@gmail.com  
 **Effective date:** Jun 2, 2026  
-**Last updated:** Oct 6, 2026
+**Last updated:** Oct 7, 2026
 
 > **Public URL:** `https://kingkim150m.github.io/timelapse-selfaccountability-android-legal/`
 
@@ -11,7 +11,7 @@
 
 ## What this app is
 
-Timelapse: Adaptive Blocking is a personal productivity tool you run for yourself. It creates a time-lapse recording of your own screen so you can review how you spent your time and hold yourself accountable. Everything stays on your phone unless you deliberately share something.
+Timelapse: Adaptive Blocking is a personal productivity tool you run for yourself. It creates a time-lapse recording of your own screen so you can review how you spent your time and hold yourself accountable. App records and settings stay on your phone unless you deliberately export or share them. One network exception is described below: while Website access is active, permitted domain lookups are sent over an encrypted connection to Cloudflare's public DNS resolver.
 
 This app is **not** a parental-control tool, an employee-monitoring tool, or a hidden surveillance tool. Screen-capture sessions are started manually by you, are visible on your screen at all times, and require your explicit approval before they begin.
 
@@ -105,13 +105,28 @@ server.
 
 If you configure Website access on a Night Lock, Focus Block, or Quick Lock, you can either
 block selected domains or allow selected domains only. The app uses Android's local VPN mechanism
-to enforce those domain rules. This VPN is local-only: it forwards permitted ordinary DNS
-lookups to the DNS resolver your device is already using and does not send traffic to a developer-run
-server. The app reads the domain name in a DNS query only to decide whether that domain matches a
-website rule you chose or the app's built-in blocklist (described below). It does not inspect or record page paths, search terms, query strings,
-cookies, page content, account data, or ordinary non-DNS traffic. Your blocked-domain list,
-browsing activity, and blocked attempts are not uploaded, remotely logged, or included in Support
-Reports.
+to enforce those domain rules. When a DNS lookup is permitted, the app sends the request over
+encrypted DNS-over-TLS to Cloudflare's public resolver at `1.1.1.1` or `1.0.0.1`, verifying the TLS
+hostname `one.one.one.one`. Cloudflare receives the requested domain name and related DNS query
+details, as well as the network source address needed to return the response. TLS encrypts the
+request in transit to Cloudflare; Cloudflare can read the requested domain name. Cloudflare says
+its Public Resolver Logs, which can include query names and related DNS details, are deleted within
+25 hours. It says source IP addresses are not retained in non-volatile storage except in limited
+randomly sampled packets for troubleshooting and denial of service mitigation, and truncated client
+IP addresses are deleted within 25 hours. Cloudflare may retain aggregate resolver data indefinitely
+and gives APNIC limited access to anonymized resolver log data for non-profit operational research.
+See Cloudflare's DNS-over-TLS documentation (`https://developers.cloudflare.com/1.1.1.1/encryption/dns-over-tls/`)
+and public resolver privacy commitments (`https://developers.cloudflare.com/1.1.1.1/privacy/public-dns-resolver/`).
+
+The app reads each DNS domain to decide whether it matches a website rule you chose or the app's
+built-in blocklist (described below). It does not inspect or record page paths, search terms, query
+strings, cookies, page content, account data, or ordinary non-DNS traffic. Your blocked-domain list
+and blocked attempts stay on your device and are not sent to Cloudflare or the developer, or
+included in Support Reports. The permitted DNS queries described above do leave the device.
+
+If an encrypted connection to Cloudflare cannot be established or verified, a valid DNS question
+fails with a local DNS `SERVFAIL` response. The app does not fall back to unencrypted DNS. A network
+that blocks DNS-over-TLS may therefore prevent domain lookups while a Website access rule is active.
 
 Whenever a Website access rule is active, in either mode, the app also blocks a built-in list of
 well-known adult-content websites and public encrypted-DNS providers, whether or not you added them.
@@ -253,9 +268,11 @@ Allows the app to restart the Focus guardian service after a normal device reboo
 
 ### Local VPN website blocking — `INTERNET`
 
-Required by Android for the optional local DNS-only VPN service. It is used only to forward a
-non-blocked DNS query to the DNS resolver already configured on your device; the app does not
-operate or contact a developer-run server, upload a blocked-domain list, or log browsing activity.
+Required by Android for the optional local DNS-only VPN service. The service sends permitted DNS
+queries to Cloudflare's public resolver over encrypted DNS-over-TLS, verifying the TLS hostname
+`one.one.one.one`. Cloudflare receives the permitted domain names and related DNS query details;
+see the Website access section for its published data-handling terms. The app does not operate a
+developer-run DNS server or send your blocked-domain list to Cloudflare.
 
 ### Short-form feed recognition — Accessibility Service (`BIND_ACCESSIBILITY_SERVICE`)
 
