@@ -79,6 +79,8 @@ You agree not to use the App to control, coerce, monitor, punish, restrict, or s
 
 The App may block or cover other apps when you enable blocking features. You are responsible for configuring rules safely. Do not configure blocking rules in a way that prevents access to emergency services, essential communications, work requirements, banking, transportation, medical tools, safety tools, or other critical services.
 
+Before starting a Quick Lock or enabling a schedule, review every app, website, and feature the rule may restrict, including the lock's duration. Do not start it unless you have confirmed that you can still reach the calling, messaging, and other communication apps or services you may need, including emergency services, or have a separate, reliable way to reach emergency services and your essential contacts that the lock cannot block. Where the App lets you choose which apps are available or blocked, make sure emergency, safety, and essential communication apps remain available. Timelapse is not an emergency service. Android, your device manufacturer, mobile carrier, network, and third-party services affect whether calls, messages, and emergency features are available; Timelapse cannot guarantee that a communication method will work or remain available during a lock. Check your setup before each lock begins and choose a duration you can safely complete.
+
 ## 9. Built-in protections and locks
 
 Some protections in the App are built in or automatic rather than optional. By using the App you accept them. They exist to help you keep your own commitments, and you remain responsible for using the App safely.
