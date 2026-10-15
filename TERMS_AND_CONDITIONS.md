@@ -3,7 +3,7 @@
 **Developer:** Alvaro Kim  
 **Contact:** kingprogramming150+t@gmail.com<br>
 **Effective date:** June 2, 2026  
-**Last updated:** October 8, 2026
+**Last updated:** October 14, 2026
 
 > **Public URL:** `https://kingkim150m.github.io/timelapse-selfaccountability-android-legal/`
 
@@ -101,7 +101,7 @@ Normal functional access requires an active subscription verified by Google Play
 
 When you purchase a subscription, Google Play handles payment processing. We do not receive your full payment card number or payment credentials.
 
-The App checks Google Play Billing for current subscription status and to restore purchases. The owner-approved offer scope is a 14-day trial on both monthly and annual plans when the corresponding offer is configured and returned as eligible for your account. The App displays only the selected current Play offer and does not create a local trial; if no eligible trial is returned, it shows the standard paid offer.
+The App checks Google Play Billing for current subscription status and to restore purchases. The monthly offer is configured for a 7-day trial and the annual offer for a 14-day trial when each offer is returned as eligible for your account. The App displays only the selected current Play offer and does not create a local trial; if no eligible trial is returned, it shows the standard paid offer.
 
 Unless otherwise shown by Google Play, subscriptions renew automatically until canceled. Uninstalling the App does not automatically cancel your subscription. You must manage or cancel subscriptions through Google Play.
 
@@ -109,7 +109,7 @@ Restore and retry request a fresh Play status. A confirmed inactive result remov
 
 ## 11. Free trials, cancellations, and refunds
 
-Google Play may return a 14-day trial offer for either the monthly or annual plan when that offer is configured and your account is eligible. Trial availability and eligibility are determined by Google Play and may differ by account; the App will show a trial only when the selected current Play offer includes an eligible 14-day phase. If an eligible trial is not returned, the standard paid offer and its current terms are shown. Google Play may charge you after a trial ends unless you cancel before the trial expires.
+Google Play may return an eligible 7-day trial with the monthly offer or a 14-day trial with the annual offer. Trial availability and eligibility are determined by Google Play and may differ by account; the App shows a trial only when the selected current Play offer includes the configured duration for that plan. If an eligible trial is not returned, the standard paid offer and its current terms are shown. Google Play may charge you after a trial ends unless you cancel before the trial expires.
 
 Refund requests are handled under Google Play's refund policies. We cannot guarantee refunds beyond what Google Play allows.
 
@@ -133,7 +133,7 @@ If your screen contains someone else's personal information, confidential busine
 
 ## 14. Privacy
 
-Your use of the App is also governed by our Privacy Policy, which explains what data is processed, where it is stored, how permissions are used, and what happens when you export or share files.
+Your use of the App is also governed by our Privacy Policy, which explains what data is processed, where it is stored, how permissions are used, and what happens when you export or share files. It also explains the optional Analytics choice and the separate diagnostics choice; enabling diagnostics does not activate collection in the production app.
 
 The Privacy Policy is available on the App's Privacy screen and at the public URL: `https://kingkim150m.github.io/timelapse-selfaccountability-android-legal/PRIVACY_POLICY.html`.
 

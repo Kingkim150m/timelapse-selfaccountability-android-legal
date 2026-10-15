@@ -3,7 +3,7 @@
 **Developer:** Alvaro Kim  
 **Contact:** kingprogramming150+t@gmail.com<br>
 **Effective date:** Jun 2, 2026  
-**Last updated:** Oct 8, 2026
+**Last updated:** October 14, 2026
 
 > **Public URL:** `https://kingkim150m.github.io/timelapse-selfaccountability-android-legal/`
 
@@ -11,7 +11,7 @@
 
 ## What this app is
 
-Timelapse: Adaptive Blocking is a personal productivity tool you run for yourself. It creates a time-lapse recording of your own screen so you can review how you spent your time and hold yourself accountable. App records and settings stay on your phone unless you deliberately export or share them. One network exception is described below: while Website access is active, permitted domain lookups are sent over an encrypted connection to Cloudflare's public DNS resolver.
+Timelapse: Adaptive Blocking is a personal productivity tool you run for yourself. It creates a time-lapse recording of your own screen so you can review how you spent your time and hold yourself accountable. Capture files, detailed session records, schedules, and settings stay on your phone unless you deliberately export or share them. Optional Analytics signals are sent to Google only if you grant Analytics consent. Website access separately sends permitted domain lookups over an encrypted connection to Cloudflare's public DNS resolver.
 
 This app is **not** a parental-control tool, an employee-monitoring tool, or a hidden surveillance tool. Screen-capture sessions are started manually by you, are visible on your screen at all times, and require your explicit approval before they begin.
 
@@ -20,9 +20,9 @@ This app is **not** a parental-control tool, an employee-monitoring tool, or a h
 ## Summary
 
 - **You start every recording.** The app never captures your screen silently or in the background without your action.
-- **Everything stays on your phone.** Captures, MP4 timelapses, PDF reports, schedules, and usage history are stored locally on your device.
-- **No developer servers.** The developer does not operate any server that receives your screen captures, usage data, or personal information.
-- **No advertising use.** Your captures and usage data are never used for advertising and are never sold to third parties.
+- **Your detailed records stay on your phone.** Captures, MP4 timelapses, PDF reports, schedules, and detailed usage history are stored locally. Optional Analytics sends limited product-measurement events and technical metadata to Google only after you grant consent.
+- **No app-operated backend.** The developer does not operate a server for app data. Separate external flows are described below: optional Analytics to Google, permitted Website access DNS queries to Cloudflare, Google Play billing, and information you choose to send for support.
+- **No advertising feature.** The app does not display ads. Its Analytics consent settings deny advertising storage, ad user-data, and ad-personalization consent; see “Optional Analytics and diagnostics” for the remaining identifier review.
 - **No camera, no microphone.** The app does not use your camera or record audio of any kind.
 - **Google Play handles billing.** Subscription payments go through Google Play; the developer never receives your payment card details.
 
@@ -42,9 +42,9 @@ The app can automatically add a supported banking app, wallet, or password manag
 exclusions. This uses a small curated list of exact, case-sensitive package IDs and only checks
 launchable apps that Android already makes visible to the app. It does not infer a sensitive app from
 an app name, icon, category, screen content, or a partial package-name match. Matching happens
-entirely on your device: the app does not send an app list, package name, or screen content to the
-developer or any outside service, and it does not request broad access to every app installed on your
-phone.
+entirely on your device: the app does not send an app list, the matched app's package name, or screen
+content to the developer or any outside service, and it does not request broad access to every app
+installed on your phone.
 
 This is a limited privacy safeguard, not a claim that the app can identify every financial app. When
 a supported app is detected, future capture sessions black out the whole frame while that app is in
@@ -55,15 +55,15 @@ a password-manager exclusion because it performs unrelated system functions.
 
 ### Local Insights (optional feature)
 
-If you use Local Insights, the app periodically checks your on-device session history, usage patterns, and streak data and generates a short observation. This processing happens entirely on the phone using simple rule-based logic — no AI model, no server request, and no data is transmitted anywhere. Generated insights are stored locally and are discarded when you dismiss them or when a new day's insights replace them.
+If you use Local Insights, the app periodically checks your on-device session history, usage patterns, and streak data and generates a short observation. This feature's processing happens entirely on the phone using simple rule-based logic — no AI model or server request is used for the insight itself. Generated insights are stored locally and are discarded when you dismiss them or when a new day's insights replace them. Separately, if you grant Analytics consent, the app may send the limited product-measurement events described below; those events do not contain your insight text or detailed session history.
 
 ### Onboarding data
 
-During the initial setup flow, the app collects a daily focus goal, a sleep and wake time for the Night Lock preset, and a list of apps you identify as distracting. This data is stored locally on your phone and is used only to pre-configure your schedules and warning settings. It is never transmitted to the developer or any external service.
+During the initial setup flow, the app collects a daily focus goal, a sleep and wake time for the Night Lock preset, and a list of apps you identify as distracting. These values and app choices are stored locally on your phone and used to pre-configure your schedules and warning settings. They are not included in Analytics event parameters. If you grant Analytics consent, limited onboarding progress and completion events may be sent as described below; actions from before consent are not stored for later Analytics delivery.
 
 ### Focus (optional feature)
 
-If you turn on Master Focus, a background service runs continuously and monitors which app is in the foreground. It enforces the focus schedules and Quick Locks you have configured by displaying a blocking overlay over restricted apps. All schedule, lock, and usage data is stored locally on your phone. The developer does not receive this data.
+If you turn on Master Focus, a background service runs continuously and monitors which app is in the foreground. It enforces the focus schedules and Quick Locks you have configured by displaying a blocking overlay over restricted apps. Your detailed schedules, lock settings, app identities, and usage history are stored locally and are not included in Analytics event parameters. If enabled, Analytics may receive coarse first-configuration, activation, or blocking milestones, as described below; it does not receive the detailed records used for enforcement.
 
 Three optional switches can extend a lock; each is off unless you turn it on for that lock:
 
@@ -82,8 +82,10 @@ Three optional switches can extend a lock; each is off unless you turn it on for
 
 ### Built-in protections (Social Cooldown, Adaptive Protection, Strict Mode, Emergency pass)
 
-These protections work entirely on your phone. None of them sends anything to the developer or any
-server.
+The protection decisions and detailed state are handled on your phone. If you grant Analytics consent,
+limited first-configuration, activation, or first-block milestones may be sent for product measurement
+as described below. Detailed protection records and app identities are not included in those event
+parameters.
 
 - **Social Cooldown** is a built-in minimum standard you agree to during setup. It uses Usage Access
   to count how long a fixed list of social and video apps (TikTok, Instagram, Facebook, X, Reddit,
@@ -171,13 +173,13 @@ Android Settings, a lock's saved setting stays saved but cannot enforce until yo
 back on. This app is not an accessibility tool and is not parental-control or employee-monitoring
 software.
 
-### What stays on your phone
+### Detailed records stored on your phone
 
-The following data is stored on-device only and is never sent to the developer or any external server:
+The following detailed app records are stored locally. They are not sent as Firebase Analytics event parameters. This list does not cover the limited optional Analytics signals described below, DNS queries sent to Cloudflare when Website access is active, Google Play billing, or information you choose to share:
 
 - Screen capture frames (auto-deleted after 7 days)
 - Assembled MP4 timelapse files
-- Session summaries and analytics
+- Session summaries and detailed local session analytics
 - PDF session and snapshot reports
 - App usage summaries
 - Weekly Rhythm's local hourly usage ledger, heatmap, and suggestion dismissals
@@ -189,11 +191,29 @@ The following data is stored on-device only and is never sent to the developer o
 - Social Cooldown timing state, Adaptive Protection state and exceptions, and Emergency pass state
 - Strict Mode settings: a one-way hash of the passcode and the trusted contact's name if you entered one
 - Settings snapshot history
-- Local Insights (generated and stored on-device; never transmitted)
+- Local Insights (generated and stored on-device)
 - Onboarding preferences (daily goal, sleep time, distraction app list)
 - Subscription status read from Google Play and cached locally, plus limited local validation metadata (product ID, validation times, and boot identity) used to enforce the bounded recovery window. This metadata is not sent to the developer.
 
 ---
+
+## Optional Analytics and diagnostics
+
+The app includes Firebase Analytics for product measurement. Analytics is off unless and until you grant the separate Analytics choice shown during onboarding. You can change this choice independently in Settings at any time. No feature or app access depends on granting it. If you decline or have not answered, Analytics collection remains disabled. The app does not queue actions from before consent or replay them after you opt in.
+
+If you grant Analytics consent, the app can send coarse events about onboarding progress and completion; first restriction configuration or activation; the first block-enforcement milestone; paywall presentation; plan selection; and basic checkout launch and callback outcomes. These custom events use limited fields such as feature category, screen surface, plan type, and flow outcome. Their parameters do not include names, email addresses, screenshots, screen contents, detailed session histories, app inventories, the names of apps you use or block, website domains, prices, payment credentials, purchase tokens, or order IDs. Custom app events do not report purchase completion, entitlement grants, or restore results.
+
+Firebase Analytics also automatically creates an app-instance identifier and may collect app/session lifecycle events (such as `first_open`, session events, and `user_engagement`) and app, device, and operating-system metadata. Network requests expose an IP address to Google's Analytics service. Google says it uses IP addresses for routing and coarse geographic derivation and discards the raw address before Analytics data is logged; the fields and available geographic detail can vary. The app does not configure an Analytics User-ID, and it does not request precise location for Analytics.
+
+The app's Analytics consent settings deny advertising storage, ad user-data, and ad-personalization consent. The production manifest does not request the Android Advertising ID permission, but the Analytics dependency includes an Ads Identifier library. Whether an advertising identifier is collected in practice has not been confirmed and remains under review for this draft.
+
+The current app manifest sets `google_analytics_automatic_screen_reporting_enabled=false`, which disables Firebase's automatic Activity-level screen reporting. The app's Compose destinations run inside one Activity, and there is no active custom route-level `screen_view` event under the current launch scope. Production event receipt has not been re-observed. Firebase Analytics can also automatically log Google Play `in_app_purchase` events when the Firebase app is linked to Google Play. Whether that link is enabled for this app, and whether any events are received, remains under confirmation; this draft does not claim that automatic purchase tracking is absent.
+
+The Analytics property is currently configured for **2 months** of user-level and event-level data retention. This setting is not a deletion deadline for every aggregate report. When you turn Analytics off, the app stops future collection, clears the SDK's local Analytics state, and refreshes its local app-instance identifier. This setting change does **not** delete Analytics records that were already uploaded.
+
+The app has a separate diagnostics choice, but the production release does not collect crash reports or diagnostic telemetry. Granting the diagnostics choice does not enable Analytics or start diagnostics collection in the production release. Crash reporting is not included in the production app build.
+
+For Google's privacy information, see https://policies.google.com/privacy. Google Analytics data handling, legal roles, and transfer details are subject to the remaining review before this policy draft is finalized.
 
 ## What the app does NOT do
 
@@ -201,11 +221,11 @@ The following data is stored on-device only and is never sent to the developer o
 - Does not use the camera
 - Does not capture your screen without your knowledge or explicit consent
 - Does not run silent background recording — the foreground service notification is always visible while capture or monitoring is active
-- Does not upload screen captures, MP4 files, PDF reports, or usage data to any server
+- Does not automatically upload screen captures, MP4 files, PDF reports, detailed local session histories, app inventories, or website lists to an app server or Analytics
 - Does not sell your personal data to anyone
-- Does not use your data for advertising or pass it to advertising networks
-- Does not include third-party analytics or crash-reporting SDKs (no Firebase Analytics, no Crashlytics, no similar services are embedded in the app)
-- Does not share your data with the developer
+- Does not use detailed app records or optional Analytics events for its own advertising and does not display ads
+- Does not collect Analytics unless you grant the separate Analytics choice
+- Does not collect crash reports or diagnostic telemetry in the production release
 
 ---
 
@@ -223,7 +243,7 @@ Required for Android to allow the capture session and the Focus guardian service
 
 ### Usage Access — `PACKAGE_USAGE_STATS`
 
-Lets the app read bounded recent usage events and which app is currently in the foreground so it can show accurate session summaries, trigger distraction warnings, enforce focus schedules, and build the local Weekly Rhythm view. Weekly Rhythm uses only on-device hourly totals and user-assigned labels; it does not inspect screen content, typed text, browsing history, VPN traffic, or Accessibility data. Android does not guarantee a complete event history, so missing hours remain unavailable rather than being shown as zero use. This is a special permission you must grant manually in Android Settings — it is not granted automatically on install. The data is read on-device only and is never sent anywhere outside the app.
+Lets the app read bounded recent usage events and which app is currently in the foreground so it can show accurate session summaries, trigger distraction warnings, enforce focus schedules, and build the local Weekly Rhythm view. Weekly Rhythm uses only on-device hourly totals and user-assigned labels; it does not inspect screen content, typed text, browsing history, VPN traffic, or Accessibility data. Android does not guarantee a complete event history, so missing hours remain unavailable rather than being shown as zero use. This is a special permission you must grant manually in Android Settings — it is not granted automatically on install. The detailed usage-event records and app identities are read and stored locally, not included in Analytics event parameters. Optional coarse product milestones are described under “Optional Analytics and diagnostics.”
 
 ### Display over other apps — `SYSTEM_ALERT_WINDOW`
 
@@ -318,7 +338,7 @@ If you choose `Send feedback`, the app opens your email app with a draft address
 
 If you choose `Request support` (or `Send report` from a monitoring alert), the app generates an optional support report locally. Depending on what is available, it can include the app name, version, build and package details; install source; device maker, model, Android version and display details; permission and service status; plan and billing availability; capture and output settings; storage totals, session and frame counts, dates and recent session metadata; capture and service-heartbeat timelines; device-wide memory-pressure readings; Android process-exit diagnostics (including reason, status, time and memory values); Focus settings and protection/activity summaries; error details and recent failure history; and app configuration flags. Android process-exit data may include the app's package-qualified process name, process ID (PID), and a random per-process run ID. The generated filename includes this app's install ID when available (or `install-unknown`); the ID appears in the filename, not in the report text.
 
-The report does not include screenshots, videos, user notes, recorded screen or session content, user-entered session names, an inventory of installed or running apps, the names of apps you allow or block, website names, browsing history, blocked attempts, account email, Google Play purchase or order IDs or tokens, raw stack traces, or personal files. The report is created on your device and is not sent automatically. You can preview it before choosing to copy, save, share, or attach it to an email. A destination receives it only if you choose to share it or send the email.
+The report does not include screenshots, videos, user notes, recorded screen or session content, user-entered session names, an inventory of installed or running apps, the names of apps you allow or block, website names, browsing history, blocked attempts, account email, Google Play purchase or order IDs or tokens, raw stack traces, or personal files. The report is created in app-private storage on your device. When generating a report, the app attempts to limit its local report files to five; it does not apply a time-based expiry. Uninstalling or clearing app data removes these local copies. The report is not sent automatically. On the Contact Support screen, you can preview it before choosing whether to copy, save, share, or email it. From a monitoring-change alert, choosing `Send report` opens an email draft with the report attached; you decide whether to send it from the email app. A destination receives the report only after you choose to share it or send the email. The developer has not confirmed how long an email provider keeps a report after you send it.
 
 ---
 
@@ -328,16 +348,10 @@ Monthly and annual subscriptions are processed by Google Play. When you subscrib
 
 - Google handles payment processing and collects your payment card details.
 - The developer does not receive your full card number or any payment credentials.
-- Normal functional access requires a current Google Play-verified subscription; the App does not offer a public free plan. A 14-day trial may apply to either monthly or annual offer only when Google Play returns that offer as eligible for your account. Current localized price, billing period, trial, and renewal terms come from the selected Play offer.
+- Normal functional access requires a current Google Play-verified subscription; the App does not offer a public free plan. A 7-day trial may apply to the monthly offer and a 14-day trial may apply to the annual offer only when Google Play returns that offer as eligible for your account. Current localized price, billing period, trial, and renewal terms come from the selected Play offer.
 - The app checks subscription status and Restore through Google Play. If Play is unavailable, a prior successful active check may support access for less than 24 hours on the same device boot; access closes at the 24-hour boundary. Otherwise access pauses until verification succeeds. A successful inactive check removes Play-based access immediately.
 - The app stores limited successful-active-check metadata on the device to enforce that recovery window. It does not include a purchase token and is not sent to the developer.
 - Google's own privacy policy governs the payment transaction: https://policies.google.com/privacy
-
----
-
-## Third-party analytics and crash reporting
-
-This app does not currently include any third-party analytics SDK (such as Firebase Analytics) or crash-reporting SDK (such as Crashlytics). No behavioral data, crash logs, or usage statistics are automatically sent to the developer or any analytics provider.
 
 ---
 
@@ -351,14 +365,15 @@ If you believe someone below the applicable age has sent personal information di
 
 ## Data retention and deletion
 
-| Data                       | How long it is kept                                         |
-| -------------------------- | ----------------------------------------------------------- |
-| Screen capture frames      | Auto-deleted from app storage after 7 days                  |
-| Session data and analytics | Retained on-device until you clear app data or uninstall    |
-| Exported MP4 and PDF files | Remain in your phone's shared storage until you delete them |
-| App data overall           | Removed when you uninstall the app                          |
+| Data                                      | How long it is kept                                                                                                  |
+| ----------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
+| Screen capture frames                     | Auto-deleted from app storage after 7 days                                                                           |
+| Session records and detailed local analytics | Up to 90 free or 365 premium sessions; older sessions are cleaned daily and the current session is protected. Remaining app-private records are removed when you clear app data or uninstall. |
+| Optional Firebase Analytics data          | The Analytics property is configured for 2 months of user-level and event-level retention; aggregate reports may remain longer. Turning Analytics off clears local SDK state but does not delete records already uploaded. |
+| Exported MP4 and PDF files                | Remain in your phone's shared storage until you delete them                                                          |
+| Remaining app-private data                | Removed when you uninstall the app                                                                                   |
 
-**No account to delete.** The app does not use accounts or sign-in. There is no server-side profile to delete.
+**No app account.** The app does not use accounts or sign-in and does not maintain an app-operated server-side profile. Optional Analytics records are separate from the local app account and data described above.
 
 **Android "Clear app data."** Clears all app-private data immediately. The app detects this on the next launch and records an entry in the Protection Log.
 
@@ -366,8 +381,10 @@ If you believe someone below the applicable age has sent personal information di
 
 ## Security
 
-- All data produced by the app is stored locally on your device.
-- The app does not operate a cloud backend or developer-run server.
+- Detailed capture, session, and Focus records are stored locally. Optional Analytics signals and permitted Website access DNS queries follow the separate network paths described above.
+- The app does not operate a cloud backend or developer-run server for app data.
+- The app does not add file-level or end-to-end encryption to locally stored captures, session records, or support reports. These files are protected by Android's per-app storage sandbox; encryption at rest depends on the device's Android storage encryption and security settings, which the app does not independently verify. `android:allowBackup="false"` disables Android Auto Backup for app-private data but is not encryption. MP4 and PDF exports in shared storage are not encrypted by the app.
+- Firebase states that its services encrypt data in transit using HTTPS. Website Access sends permitted DNS requests to Cloudflare over DNS-over-TLS. If you choose to share or email a support report, the receiving app or service controls protection after you hand it over.
 - `android:allowBackup="false"` is set in the app manifest, preventing app-private data (including screen captures and session data) from being included in Android's automatic cloud backup to Google.
 - Exported files written to shared storage are subject to Android's standard file-system protections.
 
@@ -375,9 +392,9 @@ If you believe someone below the applicable age has sent personal information di
 
 ## Your privacy rights and requests
 
-The developer does not collect, receive, or hold your personal data from the app. Captures, reports, schedules, usage history, and settings stay on your device, and the developer has no account, profile, or server-side copy of them. Because of this, there is nothing held by the developer for you to access, export, correct, or delete, so access, portability, correction, and erasure requests (for example under the GDPR, UK GDPR, CCPA/CPRA, or similar laws) do not apply to app data. You control that data yourself: clear the app's data or uninstall the app (see "Data retention and deletion").
+The app has no sign-in or account, and the developer does not operate an app backend. If you grant Analytics consent, limited event and technical data is sent to Google's Analytics service as described above. The app does not expose an Analytics app-instance identifier lookup or an in-app export or deletion control for those records. Turning Analytics off, clearing app data, or uninstalling stops future app collection but does not by itself delete records already uploaded.
 
-Outside the app, the developer may hold only two things: emails you choose to send to kingprogramming150+t@gmail.com, which are used to reply and handle your request, and order records that Google Play shares with developers (such as order ID, product, country, and amount). Google processes payments and is responsible for that data under its own privacy policy. If you want an email you sent deleted, or you have any other privacy question or request, write to kingprogramming150+t@gmail.com and the developer will respond. You may also contact your local data protection authority.
+For a privacy question or request about information associated with the app, including Analytics, contact kingprogramming150+t@gmail.com. This mailbox is monitored. The app does not currently provide a user-facing way to identify Analytics records by app-instance identifier, and a request intake, verification, response, and deletion workflow has not yet been confirmed. Email and support-report retention schedules have not been confirmed. No immediate deletion or response-time guarantee is made in this draft. The operator's legal identity and roles, applicable rights and legal bases, and data-transfer details remain subject to review before this draft is finalized. You may also contact your local data protection authority.
 
 ---
 
